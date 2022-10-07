@@ -1,4 +1,7 @@
-
+"""
+This function reads the current index of the picture we're about to send from
+a txt file named cur_index.txt, and returns it after incrementing it in the file.
+"""
 def get_cur_index():
     #this also increments the current index
     file_name = 'cur_index.txt'

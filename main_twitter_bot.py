@@ -5,10 +5,13 @@ import asyncio
 import platform
 import twitter_key_retriever
 
-if platform.system() == 'Windows':
+""" This is the main file """
+
+#I have no idea what this does, it did fix some bugs though
+if platform.system() == 'Windows': 
 	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
-#This code will post a picture named cat.jpg in the folder cat_storage onto your twitter page
+#This code will post a picture on twitter named cat.jpg in the folder cat_storage onto your twitter page
 
 # Authenticate to Twitter
 auth = tweepy.OAuthHandler(twitter_key_retriever.get_key_1(), 
@@ -34,7 +37,7 @@ def send_new_cat():
     #print("here tbot (cat sent)")
     #print("---")
 
-    discord_bot.main() #increment and get next cat
+    discord_bot.main() #increment and get next cat from discord channel
 
 while True:
    # this will remain true forever
