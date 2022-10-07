@@ -19,30 +19,20 @@ auth.set_access_token(twitter_key_retriever.get_key_3(),
 api = tweepy.API(auth)
 
 
-
+""" #If you're having auth issues uncomment these few lines.
 try:
     api.verify_credentials()
     print("Authentication OK")
 except:
     print("Error during authentication")
-
-#timeline = api.home_timeline()
-#api.update_status("")
-
-#
-
-
-
-
+"""
 
 def send_new_cat():
     media = api.media_upload(filename="cat_storage/cat.jpg") #File specification
-    #print("MEDIA: ", media)
 
     tweet = api.update_status(status="", media_ids=[media.media_id_string]) #the part that tweets out the picture
-    #print("TWEET: ", tweet)
-    print("here tbot (cat sent)")
-    print("---")
+    #print("here tbot (cat sent)")
+    #print("---")
 
     discord_bot.main() #increment and get next cat
 
