@@ -1,0 +1,6 @@
+Basically, running main_twitter_bot connects to the api with your 
+tokens (which you can get through the twitter developer portal)
+It also posts a cat picture through said api connection before
+running the discord bot which gets another cat picture from the 
+text channel they all live in and increments the increment. 
+ 
