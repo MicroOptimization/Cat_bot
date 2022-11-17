@@ -37,7 +37,6 @@ def main():
                 
             await client.change_presence(activity=discord.Game(name="with fire")) #sets bot activity status, prefaces with "playing" #Optional
             cat_channel = await self.fetch_channel(cat_channel_retriever.get_cat_channel()) #ig you don't need to get a guild to get a channel
-            #print("Channel name: " + cat_channel.name)
             
             messages = [message async for message in cat_channel.history(limit=123)]
             count = 0
@@ -47,7 +46,6 @@ def main():
 
             cur_msg = messages[len(messages) - cur_index - 1]
             await self.download_image(cur_msg, "cat") #DOWNLOADS THE IMAGE from the discord channel
-            #print("here dbot (index advanced) | Total Number of Cat Pictures: " + str(len(messages))) #useful for debugging
             
             await self.close()
             

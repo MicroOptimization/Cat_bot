@@ -7,7 +7,6 @@ import twitter_key_retriever
 
 """ This is the main file """
 
-#I have no idea what this does, it did fix some bugs though
 if platform.system() == 'Windows': 
 	asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
 
@@ -32,10 +31,7 @@ except:
 
 def send_new_cat():
     media = api.media_upload(filename="cat_storage/cat.jpg") #File specification
-
     tweet = api.update_status(status="", media_ids=[media.media_id_string]) #the part that tweets out the picture
-    #print("here tbot (cat sent)")
-    #print("---")
 
     discord_bot.main() #increment and get next cat from discord channel
 
